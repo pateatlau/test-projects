@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "command",
+        "matcher": "edit|create|str_replace_editor|apply_patch",
+        "bash": "node .github/hooks/format-source.cjs",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}
